@@ -9,7 +9,7 @@ CREATE TABLE employee (
   active boolean DEFAULT('true'),
   role AS ENUM ('general manager', 'shift manager', 'cashier'),
   manager character varying(32) DEFAULT NULL,
-  password character varying(32),
+  password character varying(128),
   createdon timestamp without time zone NOT NULL DEFAULT now() 
   
 ) WITH (
