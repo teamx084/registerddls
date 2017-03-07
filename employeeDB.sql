@@ -4,7 +4,7 @@ CREATE TABLE employee (
   id uuid NOT NULL,
   fName character varying(32) NOT NULL,
   lName character varying(32) NOT NULL,
-  username character varying(32) NOT NULL DEFAULT(''),
+  employeeId character varying(32) NOT NULL DEFAULT(''),
   CONSTRAINT employee_pkey PRIMARY KEY (id),
   active boolean DEFAULT('true'),
   role AS ENUM ('general manager', 'shift manager', 'cashier'),
@@ -25,6 +25,7 @@ INSERT INTO product VALUES (
        uuid_generate_v4()
      , 'Mister'
      , 'Test'
+	, 'username'	
 	 , 1234
 	 , 'true'
 	 , 'cashier'
